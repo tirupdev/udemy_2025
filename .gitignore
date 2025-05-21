@@ -1,0 +1,2 @@
+# list of items to ignore when committing to git    
+node_modules
