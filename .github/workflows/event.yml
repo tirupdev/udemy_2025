@@ -1,0 +1,21 @@
+# event triggr
+
+name: Event Trigger
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Enter your name'
+        required: true
+        default: 'John Doe'
+      age:
+        description: 'Enter your age'
+        required: true
+        default: '30'
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print name
