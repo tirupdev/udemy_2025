@@ -1,5 +1,3 @@
-# event triggr
-
 name: Event Trigger
 
 on:
@@ -18,4 +16,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Print name
+      - name: Print User Inputs
+        run: | # The '|' allows for multi-line commands
+          echo "Hello, ${{ github.event.inputs.name }}!"
+          echo "You are ${{ github.event.inputs.age }} years old."
