@@ -5,13 +5,13 @@ on:
     branches:
       - main
 jobs:
-  tirup_job1
+  tirup_job1:
     runs-on: ubuntu-latest
     steps:
-        -run: echo " hello Tirup"
-        -run: echo " hello Tirup"
-  tirup_job2: 
+      - name: For testing job 1
+        run: echo "hello Tirup" # <--- Space added here
+  tirup_job2:
     runs-on: ubuntu-latest
     steps:
-        -run: echo " hello Tirup"
-        -run: echo " exit Tirup"
+      - name: For testing job 2
+        run: echo "exit Tirup" # <--- Space added here
